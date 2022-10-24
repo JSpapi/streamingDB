@@ -1,0 +1,11 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.regular-text{
+	@include regularText;
+	color: $white;
+}
+.subTitle{
+	@include subTitle;
+	color: $white;
+}
