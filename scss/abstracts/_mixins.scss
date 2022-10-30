@@ -1,24 +1,46 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin regularText {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 @mixin subTitle {
-	font-weight: 500;
-	font-size: 40px;
-	line-height: 47px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
 }
 
 @mixin navbarBg {
-	background: $navbarRadialGradient;
-	box-shadow: $shadow-1;
+  background: $navbarRadialGradient;
+  box-shadow: $shadow-1;
 }
 
 @mixin transparentNavbarBg {
-	background: $dark-5;
-	box-shadow: $shadow-1;
-	border: $border-1;
+  background: $dark-5;
+  box-shadow: $shadow-1;
+  border: $border-1;
+}
+
+@mixin contentBg {
+  background: $dark-5;
+  box-shadow: $shadow-1;
+  border: $border-1;
+  backdrop-filter: $backdropFilter;
+  border-radius: 5px;
+}
+
+@mixin fontSize-20 {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+@mixin sliderArrow {
+	font-size: 0;
+	width: 30px;
+	height: 30px;
+	padding: 12px;
+	border-radius: 50%;
 }
