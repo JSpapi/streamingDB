@@ -1,0 +1,180 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.footer__content {
+  @include transparentFooterBg;
+  margin-top: 60px;
+
+  @media (max-width: 786px) {
+    & {
+      margin-top: 30px;
+    }
+  }
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 20px 0;
+  border-bottom: $border-2;
+
+  &-logo {
+    width: 260px;
+    margin-right: 100px;
+
+    img {
+      width: 260px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 100%;
+      font-size: 18px;
+      line-height: 14px;
+      color: $green;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  &-link {
+    font-size: 16px;
+    line-height: 27px;
+    color: $gray-light;
+    display: inline-block;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $green;
+    }
+
+    @media (max-width: 992px) {
+      &:hover {
+        color: $gray-light;
+      }
+    }
+  }
+
+  &-aboutUs {
+    width: 800px;
+    margin-left: 150px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray-light;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__title {
+  margin-bottom: 10px;
+}
+
+.footer__social {
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-link {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 18px;
+    margin: 0 10px;
+
+    border: 2px solid #323232;
+    border-radius: 50%;
+    color: #858585;
+    font-size: 20px;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      border: 2px solid $green;
+      color: $green;
+    }
+
+    @media (max-width: 900px) {
+      &:hover {
+        border: 2px solid #323232;
+        color: #858585;
+      }
+    }
+  }
+
+  &-politics,
+  &-rights {
+    @include regularText;
+    color: $gray-light;
+  }
+
+  &-politics {
+    border-bottom: 1px solid $gray-light;
+  }
+}
+
+// !MEDIAU QUERIES
+
+@media (max-width: 900px) {
+  .footer__info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &-logo {
+      margin: 0 0 30px 0;
+      width: auto;
+
+      img {
+        width: 170px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+
+    &-list {
+      width: 100%;
+      padding-top: 30px;
+      border-top: $border-2;
+    }
+
+    &-aboutUs {
+      display: none;
+    }
+  }
+
+  .footer__social {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+
+    &-links {
+      order: -1;
+      margin: 15px 0;
+    }
+
+    &-politics {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &-rights {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+}

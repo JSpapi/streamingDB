@@ -67,7 +67,6 @@ export const genre = () => {
 
   createCards(genreData, genreParent);
 
-  genreParent.innerHTML;
 };
 
 const createCards = (genreData, genreParent) => {
@@ -113,8 +112,12 @@ const createCards = (genreData, genreParent) => {
       }
     })
     .join("");
+    if(genreParent){
+      genreParent.innerHTML = newGeners;
+    }else{
+      return;
+    }
 
-  genreParent.innerHTML = newGeners;
 };
 
 // !FUNCTION THAT CREATES GENRE END

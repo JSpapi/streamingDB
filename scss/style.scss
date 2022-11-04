@@ -9,7 +9,12 @@
 // ! LAYOUT STYLES
 @use './layouts/main';
 
+// !AUTHORIZATION
+@use './components/authorization';
+
+
 // ! COMPONENTS
 @use './components/navbar';
 @use './components/genre';
 @use './components/sidebar';
+@use './components/footer';

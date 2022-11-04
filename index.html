@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru-RU">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -18,6 +22,11 @@
     <!-- !NAVBR -->
     <nav class="nav">
       <div class="container">
+        <div class="signUp-logIn">
+          <a href="#!" data-signUp-target="#signUp-form">Sign Up |</a>
+          <a href="#!" data-popUp-target="#logIn-from">Log In</a>
+        </div>
+
         <div class="navbar">
           <!-- !NAVBAR LOGO -->
           <div class="navbar-logo">
@@ -170,12 +179,22 @@
         </div>
 
         <div class="adaptive-navbar__social">
-          <img src="./images/icons/navbar-facebook.svg" alt="navbar facebook" />
-          <img
-            src="./images/icons/navbar-instagram.svg"
-            alt="navbar instagram"
-          />
-          <img src="./images/icons/navbar-vk.svg" alt="navbar vk" />
+          <a href="#!">
+            <img
+              src="./images/icons/navbar-facebook.svg"
+              alt="navbar facebook"
+            />
+          </a>
+
+          <a href="#!">
+            <img
+              src="./images/icons/navbar-instagram.svg"
+              alt="navbar instagram"
+            />
+          </a>
+          <a href="#!">
+            <img src="./images/icons/navbar-vk.svg" alt="navbar vk" />
+          </a>
         </div>
       </div>
       <!-- ! ADABTIVE NAVBAR END-->
@@ -194,7 +213,7 @@
 
         <form class="adaptive-searchbar__form">
           <input class="adaptive-searchbar__input" type="text" />
-          <button class="adaptive-searchbar__btn">
+          <button class="adaptive-searchbar__btn" >
             <img src="./images/icons/search.svg" alt="search" />
           </button>
         </form>
@@ -203,7 +222,7 @@
     </nav>
     <!-- !NAVBR END-->
     <!-- !MAIN -->
-    <main class="main home-page">
+    <!-- <main class="main home-page">
       <div class="container">
         <div class="main__inner">
           <div class="content">
@@ -363,9 +382,143 @@
           </div>
         </div>
       </div>
-    </main>
+    </main> -->
 
     <!-- !MAIN END -->
+    <!-- <footer class="footer">
+      <div class="footer__content">
+        <div class="container">
+          <div class="footer__info">
+            <a class="footer__info-logo" href="./index.html">
+              <img
+                class="footer-logo__img"
+                src="./images/icons/Logo.svg"
+                alt="logo"
+              />
+              <p>Знаем, что вам понравится</p>
+            </a>
+
+            <div class="footer__info-list">
+              <h4 class="footer__title fontBold18">Меню</h4>
+              <ul>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="./pages/selections.html"
+                    >Подборки</a
+                  >
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="./index.html">По жанру</a>
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="./pages/movie.html"
+                    >Фильмы</a
+                  >
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="#!">Сериалы</a>
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="#!">Мультфильмы</a>
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="#!">Аниме</a>
+                </li>
+                <li class="footer__info-item">
+                  <a class="footer__info-link" href="#!">Актеры</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__info-aboutUs">
+              <h4 class="footer__title fontBold18">О нас</h4>
+
+              <p class="footer__info-text">
+                Зная всё о кино, хочется поделиться этим с другими. Делитесь
+                фильмами, трейлерами, персонами и новостями в социальных сетях,
+                присваивайте рейтинги фильмам и обсуждайте их с друзьями и
+                подписчиками!
+              </p>
+              <p class="footer__info-text">
+                Интересные фильмы, ближайшие кинотеатры и любимых актеров можно
+                добавлять в «Избранное». Система покажет все связанные с ними
+                новости и новые трейлеры, подскажет, когда можно купить билет в
+                кино на интересующую премьеру. Присоединяйтесь!
+              </p>
+            </div>
+          </div>
+
+          <div class="footer__social">
+            <a class="footer__social-rights" href="#!">
+              &copy;Все права защищены MovieDB.ru 2021
+            </a>
+
+            <div class="footer__social-links">
+              <a class="footer__social-link" href="#!">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a class="footer__social-link" href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a class="footer__social-link" href="#!">
+                <i class="fa-brands fa-vk"></i>
+              </a>
+            </div>
+
+            <a class="footer__social-politics" href="#!">
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- !REGISTRATION POPUP -->
+    <div class="authorization-popup" id="signUp-form">
+      <div class="authorization">
+        <div class="authorization__header">
+          <p class="authorization__header-title">Регистрация</p>
+          <p class="authorization__close" data-popUp-close>&times;</p>
+        </div>
+
+        <div class="authorization__body">
+          <form class="authorization__from" id="signUp" method="post" name="signUp">
+            <div class="textField">
+              <label class="textField__label" for="name">Твоё Имя</label>
+              <input class="textField__input" id="name" type="text" autocomplete="username"  placeholder="Имя" required name="name">
+            </div>
+            <div class="textField">
+              <label class="textField__label" for="email">Твой Email</label>
+              <input class="textField__input" id="email" type="email" autocomplete="useremail" placeholder="Email" required name="email">
+            </div>
+            <div class="textField">
+              <label class="textField__label" for="password">Пароль</label>
+              <input class="textField__input" id="password" type="password" autocomplete="new-password"  minlength="6" placeholder="Не меньше 6 символов" required name="password">
+            </div>
+            <div class="textField">
+              <label class="textField__label" for="confirmPassword">Повтори Пароль</label>
+              <input class="textField__input" id="confirmPassword" type="password" minlength="6" placeholder="смотри не ошибись" required name="confirmPassword">
+            </div>
+    
+            <div class="textField">
+              <input class="textField__acceptRules" id="accept-rules" type="checkbox" checked>
+              <label class="textField__rules" for="accept-rules">
+                Я согласен с 
+                <a class="rules__links" href="#!" target="_blank">правилами сайта</a>
+              </label>
+            </div>
+
+            <div class="authorization__submit">
+              <button class="authorization__submit-btn" type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+    <!-- !REGISTRATION POPUP END -->
+    <!-- !AUTHORIZATION POP UP -->
+    <div id="overlay"></div>
+    <!-- !AUTHORIZATION POP UP END -->
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- SLIDER SLICK -->

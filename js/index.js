@@ -6,7 +6,7 @@ import {
 
 import { genre } from "./genre.js";
 import { newCollections } from "./sidebar.js";
-
+import { createSignUpFuctional } from "./authorization.js";
 // !SLIDERS START
 $(document).ready(function () {
   $(".popular__collection-slider").slick({
@@ -38,10 +38,14 @@ const triggerAllFunctions = () => {
 
   disableAllBtns();
 
+  // !CREATE GENRE FICTION
   genre();
 
-  // !siderbar
+  // !sidebar
   newCollections();
+
+  // !SIGN UP
+  createSignUpFuctional();
 };
 
 triggerAllFunctions();

@@ -11,9 +11,12 @@
 		line-height: 16px;
 	 }
 	}
-	
 }
 .subTitle{
 	@include subTitle;
 	color: $white;
+}
+
+.fontBold18{
+	@include fontBold18;
 }
