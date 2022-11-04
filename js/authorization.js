@@ -4,10 +4,13 @@ export const createSignUpFuctional = () => {
   const popUpOpenBtns = document.querySelector("[data-signUp-target]");
   const popUpCloseBtns = document.querySelectorAll("[data-popUp-close]");
   const overlay = document.querySelector("#overlay");
+  console.log(popUpOpenBtns);
 
   //   !POP UP OPEN
   popUpOpenBtns.addEventListener("click", () => {
-    const signUpForm = document.querySelector(popUpOpenBtns.dataset.popupTarget);
+    const signUpForm = document.querySelector(
+      popUpOpenBtns.dataset.signupTarget
+    );
     popUpOpen(signUpForm, overlay);
   });
 
@@ -22,9 +25,11 @@ export const createSignUpFuctional = () => {
 
   // !OVERLAY CLOSE
   overlay.addEventListener("click", () => {
-	const signUpForm = document.querySelector(popUpOpenBtns.dataset.popupTarget);
-	signUpForm.classList.remove('active');
-	overlay.classList.remove('active');
+    const signUpForm = document.querySelector(
+      popUpOpenBtns.dataset.signupTarget
+    );
+    signUpForm.classList.remove("active");
+    overlay.classList.remove("active");
   });
 };
 
@@ -43,5 +48,3 @@ const popUpClose = (signUpForm) => {
 };
 
 // !AUTHORIZATION POP UP END
-
-

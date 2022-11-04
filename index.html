@@ -213,7 +213,7 @@
 
         <form class="adaptive-searchbar__form">
           <input class="adaptive-searchbar__input" type="text" />
-          <button class="adaptive-searchbar__btn" >
+          <button class="adaptive-searchbar__btn">
             <img src="./images/icons/search.svg" alt="search" />
           </button>
         </form>
@@ -481,38 +481,86 @@
         </div>
 
         <div class="authorization__body">
-          <form class="authorization__from" id="signUp" method="post" name="signUp">
+          <form
+            class="authorization__from"
+            id="signUp"
+            method="post"
+            name="signUp"
+          >
             <div class="textField">
               <label class="textField__label" for="name">Твоё Имя</label>
-              <input class="textField__input" id="name" type="text" autocomplete="username"  placeholder="Имя" required name="name">
+              <input
+                class="textField__input"
+                id="name"
+                type="text"
+                autocomplete="username"
+                placeholder="Имя"
+                required
+                name="name"
+              />
             </div>
             <div class="textField">
               <label class="textField__label" for="email">Твой Email</label>
-              <input class="textField__input" id="email" type="email" autocomplete="useremail" placeholder="Email" required name="email">
+              <input
+                class="textField__input"
+                id="email"
+                type="email"
+                autocomplete="useremail"
+                placeholder="Email"
+                required
+                name="email"
+              />
             </div>
             <div class="textField">
               <label class="textField__label" for="password">Пароль</label>
-              <input class="textField__input" id="password" type="password" autocomplete="new-password"  minlength="6" placeholder="Не меньше 6 символов" required name="password">
+              <input
+                class="textField__input"
+                id="password"
+                type="password"
+                autocomplete="new-password"
+                minlength="6"
+                placeholder="Не меньше 6 символов"
+                required
+                name="password"
+              />
             </div>
             <div class="textField">
-              <label class="textField__label" for="confirmPassword">Повтори Пароль</label>
-              <input class="textField__input" id="confirmPassword" type="password" minlength="6" placeholder="смотри не ошибись" required name="confirmPassword">
+              <label class="textField__label" for="confirmPassword"
+                >Повтори Пароль</label
+              >
+              <input
+                class="textField__input"
+                id="confirmPassword"
+                type="password"
+                minlength="6"
+                placeholder="смотри не ошибись"
+                required
+                name="confirmPassword"
+              />
             </div>
-    
+
             <div class="textField">
-              <input class="textField__acceptRules" id="accept-rules" type="checkbox" checked>
+              <input
+                class="textField__acceptRules"
+                id="accept-rules"
+                type="checkbox"
+                checked
+              />
               <label class="textField__rules" for="accept-rules">
-                Я согласен с 
-                <a class="rules__links" href="#!" target="_blank">правилами сайта</a>
+                Я согласен с
+                <a class="rules__links" href="#!" target="_blank"
+                  >правилами сайта</a
+                >
               </label>
             </div>
 
             <div class="authorization__submit">
-              <button class="authorization__submit-btn" type="submit">Sign up</button>
+              <button class="authorization__submit-btn" type="submit">
+                Sign up
+              </button>
             </div>
           </form>
         </div>
-  
       </div>
     </div>
     <!-- !REGISTRATION POPUP END -->
