@@ -1,0 +1,271 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.movie__card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.movie__card-left {
+  width: 400px;
+  &_img {
+    width: 100%;
+    cursor: pointer;
+    filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.14));
+    border: $border-1;
+    border-radius: 5px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      .play__movie {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_score {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    @include contentBg;
+    margin-bottom: 20px;
+
+    &_circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      filter: drop-shadow(-6px -6px 12px #535353)
+        drop-shadow(6px 6px 12px #000000);
+    }
+
+    .kinopoisk {
+      border-color: #ff8e00 #ff6c01;
+    }
+
+    .imdb {
+      border-color: #e3ac3c;
+    }
+
+    &_textBold {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      color: $white;
+    }
+
+    &_text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+    }
+  }
+
+  &_trailer {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: block;
+
+    &_img {
+      width: 100%;
+
+      .trailer_img {
+        width: 400px;
+        object-fit: cover;
+      }
+    }
+
+    &_play {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.movie__card-right {
+  width: 100%;
+
+  &_title {
+    margin-bottom: 20px;
+  }
+
+  &_originalName {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: $white;
+    margin: 10px 0;
+  }
+
+  &_techSpecs {
+    background: $dark;
+    border: $border-1;
+    border-radius: 5px;
+
+    padding: 19px 58px 15px 20px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_title {
+      @include fontSize-20;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 8px;
+
+      @media (max-width: 550px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &_details {
+    @include contentBg;
+    margin-bottom: 15px;
+
+    &_item {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: $white;
+      padding: 15px 20px;
+      border: $border-1;
+
+      span {
+        margin-right: 50px;
+      }
+    }
+
+    &_item:nth-child(1) {
+      span {
+        margin-right: 182px;
+      }
+    }
+    &_item:nth-child(2) {
+      span {
+        margin-right: 172px;
+      }
+    }
+    &_item:nth-child(3) {
+      span {
+        margin-right: 100px;
+      }
+    }
+    &_item:nth-child(4) {
+      a {
+        border-bottom: 1px solid $white;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &_about {
+    @include contentBg;
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    &_text {
+      margin: 15px 0 20px 0;
+    }
+
+  }
+
+  .movie__card-right_more {
+    text-align: right;
+
+    a {
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  .movie__card-right_more:nth-child(3){
+    text-align: left;
+
+     a {
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  &_casts {
+    @include contentBg;
+    padding: 15px 20px;
+
+    &_content{
+      margin-bottom: 20px;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #a4a4a4;
+      margin-bottom: 20px;
+    }
+
+    &_b{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &_b:nth-child(2){
+      gap: 15px;
+    }
+
+    &_person{
+      display: flex;
+      align-items: center;
+      border: $border-1;
+
+      span{
+        margin: 0 10px;
+      }
+    }
+
+    &_film{
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+      letter-spacing: 1px;
+      display: block;
+
+      span:first-child{
+        color: $green;
+        font-weight: 700;
+      }
+
+      span:last-child{
+        color: #a4a4a4;
+      }
+    }
+
+    &_film:nth-child(1){
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -6,10 +6,10 @@
   line-height: 19px;
 }
 
-@mixin subTitle {
+@mixin sectionTitle {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
+  font-size: 34px;
+  line-height: 41px;
 }
 
 @mixin fontBold18 {
@@ -17,6 +17,12 @@
   font-size: 18px;
   line-height: 27px;
   color: $white;
+}
+
+@mixin fontSize-20 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 @mixin navbarBg {
@@ -42,12 +48,6 @@
   border: $border-1;
   backdrop-filter: $backdropFilter;
   border-radius: 5px;
-}
-
-@mixin fontSize-20 {
-  font-size: 20px;
-  line-height: 23px;
-  font-weight: 400;
 }
 
 @mixin sliderArrow {

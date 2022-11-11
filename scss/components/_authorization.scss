@@ -48,21 +48,6 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-// .authorization-popup {
-//   width: 400px;
-//   max-width: 80%;
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) scale(0);
-//   transition: transform .5s ease;
-// }
-
-// .authorization-popup.active{
-//   transform: translate(-50%, -50%) scale(1);
-//   z-index: 501;
-// }
-
 .authorization {
   width: 100%;
   background: #5c5864;
@@ -197,3 +182,5 @@
     cursor: pointer;
   }
 }
+
+

@@ -1,20 +1,37 @@
 import {
-  disableAllBtns,
+  // disableAllBtns,
   activeAdaptiveNavbar,
   activeAdaptiveSearchbar,
 } from "./navbar.js";
 
 import { genre } from "./genre.js";
 import { newCollections } from "./sidebar.js";
-import { createSignUpFuctional } from "./authorization.js";
+import {
+  createSignUpFuctional,
+  createLogInfunctional,
+  userRegistration,
+  logIn,
+} from "./authorization.js";
+
+import {movieSliders} from './headingSlider.js'
+
 // !SLIDERS START
 $(document).ready(function () {
   $(".popular__collection-slider").slick({
     dots: true,
-    // autoplay: true,
+    autoplay: true,
   });
 });
 
+
+// !HEADING SLIDER
+$(document).ready(function () {
+  $(".heading__sliders").slick({
+    dots: true,
+    autoplay: true,
+  });
+});
+// !HEADING SLIDER END
 // !SLIDERS END
 
 // !PRELOADER
@@ -36,7 +53,7 @@ const triggerAllFunctions = () => {
 
   activeAdaptiveSearchbar();
 
-  disableAllBtns();
+  // disableAllBtns();
 
   // !CREATE GENRE FICTION
   genre();
@@ -46,6 +63,13 @@ const triggerAllFunctions = () => {
 
   // !SIGN UP
   createSignUpFuctional();
+  // !LOG IN
+  createLogInfunctional();
+
+  userRegistration();
+  logIn();
+  // !HEADING SLIDER
+  movieSliders()
 };
 
 triggerAllFunctions();

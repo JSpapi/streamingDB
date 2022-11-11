@@ -1,9 +1,9 @@
-export const disableAllBtns = () => {
-  const allBtns = document.querySelectorAll("button");
-  allBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => e.preventDefault());
-  });
-};
+// export const disableAllBtns = () => {
+//   const allBtns = document.querySelectorAll("button");
+//   allBtns.forEach((btn) => {
+//     btn.addEventListener("click", (e) => e.preventDefault());
+//   });
+// };
 
 // !navbar burger function
 export const activeAdaptiveNavbar = () => {
@@ -32,7 +32,9 @@ export const activeAdaptiveSearchbar = () => {
   const NavbarCloseBtn = document.querySelectorAll(".adaptive-header__close");
   const navbar = SearchbarBtn.closest(".navbar");
 
-  SearchbarBtn.addEventListener("click", () => {
+  SearchbarBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
     if (screen.width <= 1024) {
       adaptiveSearchbar.classList.add("active");
       navbar.style.display = "none";
