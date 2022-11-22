@@ -1,0 +1,240 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.player-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.587);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+  cursor: pointer;
+}
+
+.player-overlay.active {
+  display: block;
+}
+
+.filmPlayer {
+  padding: 0 15px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    &{
+      top: 35%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &{
+      top: 25%;
+    }
+  }
+  @media (max-width: 600px) {
+    &{
+      top: 17%;
+    }
+  }
+
+  .film__controls,
+  .film__timer,
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .film__wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .film__wrapper::before {
+    content: "";
+    width: 100%;
+    height: calc(100% + 35px);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .film__timeline {
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+
+    .progress-area {
+      height: 3px;
+      background: $gray-light;
+      position: relative;
+
+      span {
+        font-size: 13px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -25px;
+        color: $white;
+      }
+
+      span,
+      .progress-bar::before {
+        display: none;
+      }
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: $green;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 13px;
+        height: 13px;
+        background: inherit;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover .progress-area span,
+    &:hover .progress-bar::before {
+      display: block;
+    }
+  }
+
+  .film__controls {
+    padding: 5px 20px 10px;
+
+    .options {
+      width: 100%;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: none;
+        color: $white;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      button :where(i, span) {
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+      }
+
+      input {
+        height: 4px;
+        width: 75px;
+      }
+
+      .film__timer {
+        font-size: 14px;
+        color: $white;
+        margin-left: 15px;
+
+        .separator {
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0 5px;
+          font-family: $philosopher;
+        }
+      }
+    }
+
+    .options:first-child {
+      justify-content: flex-start;
+    }
+    .options:last-child {
+      justify-content: flex-end;
+    }
+
+    .playback-content {
+      position: relative;
+
+      .speed-options {
+        position: absolute;
+        bottom: 40px;
+        left: -40px;
+        width: 95px;
+        background: $white;
+        border-radius: 5px;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.3s ease;
+
+        li {
+          font-size: 14px;
+          padding: 5px 0 5px 15px;
+          cursor: pointer;
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+
+        li.active {
+          color: $white;
+          background: $green;
+        }
+      }
+    }
+
+    .speed-options.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  video {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.filmPlayer.active {
+  display: flex;
+}
+
+.film__container {
+  width: 98%;
+  max-width: 900px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.film__container.show-controls .film__wrapper {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s ease;
+}
+
+.film__container.fullscreen {
+  max-width: 100%;
+  width: 100%;
+}

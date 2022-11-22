@@ -1,8 +1,34 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+// !SCROLL BAR STYLE
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $green;
+  height: 5px;
+}
+// !container
 .container {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+// !section paddins
+.section-padding{
+  padding: 40px 0;
+}
+
+.content__title{
+  margin-bottom: 30px;
 }
 
 // !preloader
@@ -56,7 +82,7 @@
 
 .main__inner {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 72% 25%;
   gap: 30px;
 }
 
@@ -64,7 +90,7 @@
 @media (max-width: 1170px) {
   .main__inner {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 62% 35%;
     gap: 30px;
   }
 }

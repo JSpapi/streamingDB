@@ -1,11 +1,13 @@
+// !import navbar js
 import {
-  // disableAllBtns,
   activeAdaptiveNavbar,
   activeAdaptiveSearchbar,
 } from "./navbar.js";
 
+// !import genre and sidebar js
 import { genre } from "./genre.js";
 import { newCollections } from "./sidebar.js";
+// !import registration js
 import {
   createSignUpFuctional,
   createLogInfunctional,
@@ -13,7 +15,13 @@ import {
   logIn,
 } from "./authorization.js";
 
-import {movieSliders} from './headingSlider.js'
+// !import header slider js
+import {movieSliders} from './headingSlider.js';
+
+// !import film  js
+import {film} from './films.js';
+// !import videoplayer js
+import {createFilmPlayer} from './videoPlayer.js';
 
 // !SLIDERS START
 $(document).ready(function () {
@@ -69,7 +77,11 @@ const triggerAllFunctions = () => {
   userRegistration();
   logIn();
   // !HEADING SLIDER
-  movieSliders()
+  movieSliders();
+
+  film();
+
+  createFilmPlayer();
 };
 
 triggerAllFunctions();

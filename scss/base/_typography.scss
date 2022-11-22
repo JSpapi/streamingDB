@@ -25,6 +25,11 @@
   }
 }
 
+.border-bottom{
+  border-bottom: 1px solid $green;
+  padding-bottom: 20px;
+}
+
 .fontBold18 {
   @include fontBold18;
 
@@ -105,6 +110,10 @@
     img {
       width: 64px;
       margin-bottom: 5px;
+
+      @media (max-width: 550px) {
+        width: 44px;
+      }
     }
 
     p {
@@ -112,6 +121,11 @@
       line-height: 16px;
       font-weight: 400;
       color: $white;
+
+      @media (max-width: 550px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
   }
 }
