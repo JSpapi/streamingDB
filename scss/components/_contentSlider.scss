@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.contentSlider__sliders {
+  &-img {
+    width: 230px;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-filmRate {
+    img {
+      width: 34px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
