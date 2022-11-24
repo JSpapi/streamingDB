@@ -5,7 +5,7 @@ import { activeAdaptiveNavbar, activeAdaptiveSearchbar } from "./navbar.js";
 import { genre } from "./genre.js";
 
 import { newCollections } from "./sidebar.js";
-// !import registration js
+// !import registration
 import {
   createSignUpFuctional,
   createLogInfunctional,
@@ -13,35 +13,41 @@ import {
   logIn,
 } from "./authorization.js";
 
-// !import header slider js
+// !import header slider
 import { movieSliders } from "./headingSlider.js";
 
-// !import content slider js
+// !import content slider
+import { similarFilmCards } from "./filmsCards.js"
+
+// !import FILM cards to chose film
 import { contentSlider } from "./contentSlider.js";
 
-// !import film  js
+// !import film to watch
 import { film } from "./films.js";
 
-// !import videoplayer js
+// !import videoplayer
 import { createFilmPlayer } from "./videoPlayer.js";
 
 // !SLIDERS START
+// TODO SIDEBAR SLIDER
 $(document).ready(function () {
   $(".popular__collection-slider").slick({
     dots: true,
     autoplay: true,
   });
 });
+// TODO SIDEBAR SLIDER END
 
-// !HEADING SLIDER
+// TODO HEADING SLIDER
 $(document).ready(function () {
   $(".heading__sliders").slick({
     dots: true,
     autoplay: true,
   });
 });
-// !HEADING SLIDER END
-// !CONTENT SLIDER
+// TODO HEADING SLIDER END
+
+// TODO CONTENT SLIDER
 $(document).ready(function () {
   $(".contentSlider__sliders").slick({
     dots: false,
@@ -63,7 +69,7 @@ $(document).ready(function () {
     ],
   });
 });
-// !CONTENT SLIDER END
+// TODO CONTENT SLIDER END
 // !SLIDERS END
 
 // !PRELOADER
@@ -101,13 +107,16 @@ const triggerAllFunctions = () => {
   // !HEADING SLIDER
   movieSliders();
 
-  // !FILM CARD
+  // !FILM TO WATCH
   film();
 
   // !FILM PLAYER
   createFilmPlayer();
   // !CONTENT SLIDER
   contentSlider();
+
+  // !FILM CARDS TO CHOSE
+  similarFilmCards();
 };
 
 triggerAllFunctions();
