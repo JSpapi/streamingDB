@@ -68,6 +68,12 @@
     url("../../images/bgImg/bg-2.png") no-repeat right bottom;
 }
 
+.movie-page {
+  background: url("../../images/bgImg/bg-1.png") no-repeat left top,
+    url("../../images/bgImg/bg-2.png") no-repeat right center,
+    url("../../images/bgImg/bg-3.png") no-repeat left bottom,
+}
+
 // !MAIN
 
 .main {

@@ -1,11 +1,9 @@
 // !import navbar js
-import {
-  activeAdaptiveNavbar,
-  activeAdaptiveSearchbar,
-} from "./navbar.js";
+import { activeAdaptiveNavbar, activeAdaptiveSearchbar } from "./navbar.js";
 
 // !import genre and sidebar js
 import { genre } from "./genre.js";
+
 import { newCollections } from "./sidebar.js";
 // !import registration js
 import {
@@ -16,12 +14,16 @@ import {
 } from "./authorization.js";
 
 // !import header slider js
-import {movieSliders} from './headingSlider.js';
+import { movieSliders } from "./headingSlider.js";
+
+// !import content slider js
+import { contentSlider } from "./contentSlider.js";
 
 // !import film  js
-import {film} from './films.js';
+import { film } from "./films.js";
+
 // !import videoplayer js
-import {createFilmPlayer} from './videoPlayer.js';
+import { createFilmPlayer } from "./videoPlayer.js";
 
 // !SLIDERS START
 $(document).ready(function () {
@@ -31,7 +33,6 @@ $(document).ready(function () {
   });
 });
 
-
 // !HEADING SLIDER
 $(document).ready(function () {
   $(".heading__sliders").slick({
@@ -40,6 +41,15 @@ $(document).ready(function () {
   });
 });
 // !HEADING SLIDER END
+// !CONTENT SLIDER
+$(document).ready(function () {
+  $(".contentSlider__sliders").slick({
+    dots: false,
+    autoplay: true,
+    slidesToShow: 4,
+  });
+});
+// !CONTENT SLIDER END
 // !SLIDERS END
 
 // !PRELOADER
@@ -79,9 +89,13 @@ const triggerAllFunctions = () => {
   // !HEADING SLIDER
   movieSliders();
 
+  // !FILM CARD
   film();
 
+  // !FILM PLAYER
   createFilmPlayer();
+  // !CONTENT SLIDER
+  contentSlider();
 };
 
 triggerAllFunctions();

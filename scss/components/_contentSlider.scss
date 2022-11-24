@@ -2,16 +2,43 @@
 @use "../abstracts/variables" as *;
 
 .contentSlider__sliders {
-  &-img {
-    width: 230px;
-    position: relative;
+  &-item{
+    width: 250px !important;
+    height: 360px !important;
+  }
 
-    img {
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 10px;
+
+    .slider-img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      .play__movie {
+        opacity: 1;
+      }
     }
   }
 
   &-filmRate {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 0px 5px 5px 0px;
+
+    .rate-source {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
     img {
       width: 34px;
     }
@@ -20,6 +47,56 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 21px;
+      color: $white;
+      padding: 7px;
     }
+  }
+  .kinopoisk-rate {
+    background: #e16001;
+  }
+  .imdb-rate {
+    top: 45px;
+    background: #d49f31;
+  }
+
+  .slider-title {
+    margin-bottom: 10px;
+  }
+}
+
+.contentSlider__sliders {
+  position: relative;
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .slick-arrow{
+    position: absolute;
+    font-size: 0;
+    top: 50%;
+    z-index: 20;
+  }
+
+  .slick-next {
+    @include sliderArrow;
+    background: url("../../images/icons/right-arrow.svg") no-repeat center
+    center $green;
+    cursor: pointer;
+    right: 0;
+  }
+
+  .slick-prev {
+    @include sliderArrow;
+    background: url("../../images/icons/left-arrow.svg") no-repeat center
+    center $green;
+    cursor: pointer;
+    left: 0;
   }
 }

@@ -30,6 +30,8 @@
     </div>
     <!-- !PRELOADER END -->
 
+    <div class="wrapper movie-page">
+
     <!-- !NAVBR -->
     <nav class="nav">
       <div class="container">
@@ -226,7 +228,7 @@
     </nav>
     <!-- !NAVBR END-->
     <!-- !MAIN -->
-    <main class="main home-page">
+    <main class="main ">
       <div class="container">
         <div class="main__inner">
           <div class="content">
@@ -258,25 +260,17 @@
                 </h2>
               </div>
 
-              <div class="contentSlider__sliders">
-                <div class="contentSlider__sliders-item">
-                  <div class="contentSlider__sliders-img">
-                    <img src="./images/films/film-1.png" alt="" />
+              <div class="contentSlider__sliders" data-film="best-film"></div>
+            </section>
 
-                    <div class="contentSlider__sliders-filmRate kinopoisk-rate">
-                      <img src="./images/icons/kinopoisk.svg" alt="" />
-                      <span>4.8</span>
-                    </div>
-                    <div class="contentSlider__sliders-filmRate imdb-rate">
-                      <img src="./images/icons/imdb.svg" alt="" />
-                      <span>4.7</span>
-                    </div>
-                  </div>
-
-                  <p class="slider-title">Механик</p>
-                  <p class="slider-subtitle">2020, Драма, США</p>
-                </div>
+            <section class="contentSlider section-padding">
+              <div class="content__title">
+                <h2 class="section-title border-bottom">
+                  Новые похожие фильмы
+                </h2>
               </div>
+
+              <div class="contentSlider__sliders" data-film="new-film"></div>
             </section>
           </div>
           <div class="sidebar">
@@ -463,6 +457,7 @@
       </div>
     </footer>
     <!-- !FOOTER END -->
+    </div>
 
     <!-- !VIDEO PLAYER -->
     <div class="player-overlay"></div>
