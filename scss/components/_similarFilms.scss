@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+
+.similar__movies-content{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 20px;
+}
+
+.similar__movies-img {
+  display: inline-block;
+  width: 250px;
+  position: relative;
+
+  .movies-img {
+    width: 100%;
+  }
+
+  &:hover {
+    .play__movie {
+      opacity: 1;
+    }
+  }
+}

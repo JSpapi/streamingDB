@@ -47,6 +47,20 @@ $(document).ready(function () {
     dots: false,
     autoplay: true,
     slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
 });
 // !CONTENT SLIDER END
@@ -70,8 +84,6 @@ const triggerAllFunctions = () => {
   activeAdaptiveNavbar();
 
   activeAdaptiveSearchbar();
-
-  // disableAllBtns();
 
   // !CREATE GENRE FICTION
   genre();
