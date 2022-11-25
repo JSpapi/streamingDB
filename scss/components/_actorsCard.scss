@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.popular__actors-content {
+  display: flex;
+  gap: 15px;
+
+  .popular__actors-item {
+    max-width: 250px;
+    width: 100%;
+
+    .popular__actors-img {
+      display: inline-block;
+      margin-bottom: 10px;
+      height: 350px;
+
+      @media (max-width: 550px) {
+        height: 200px;
+      }
+    }
+  }
+}

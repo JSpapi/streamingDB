@@ -1,27 +1,27 @@
 // ! ABSTRACTS
-@use './abstracts/mixins';
-@use './abstracts/variables';
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
 
 // ! BASE STYLES
-@use './base/reset';
-@use './base/typography';
-@use './base/videoPlayer';
+@use "./base/reset";
+@use "./base/typography";
+@use "./base/videoPlayer";
 
 // ! LAYOUT STYLES
-@use './layouts/main';
+@use "./layouts/main";
 
 // !AUTHORIZATION
-@use './components/authorization';
-
+@use "./components/authorization";
 
 // ! COMPONENTS
-@use './components/navbar';
-@use './components/headingSlider';
-@use './components/genre';
-@use './components/sidebar';
-@use './components/films';
-@use './components/collections';
-@use './components/contentSlider';
-@use './components/similarFilms';
-@use './components/selectionFilms';
-@use './components/footer';
+@use "./components/navbar";
+@use "./components/headingSlider";
+@use "./components/genre";
+@use "./components/sidebar";
+@use "./components/films";
+@use "./components/collections";
+@use "./components/contentSlider";
+@use "./components/similarFilms";
+@use "./components/selectionFilms";
+@use "./components/actorsCard";
+@use "./components/footer";

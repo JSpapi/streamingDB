@@ -4,10 +4,10 @@ export const film = () => {
 };
 
 const getFilmData = async (filmParent) => {
-  const FILMURL = "https://ramazanmovie.uz/api/v1/movie/";
+  const FILM_URL = "https://ramazanmovie.uz/api/v1/movie/";
 
   try {
-    const data = await fetch(FILMURL);
+    const data = await fetch(FILM_URL);
     const response = await data.json();
     if (data.ok) {
       const movieCard = response

@@ -23,17 +23,17 @@
 }
 
 // !section paddins
-.section-padding{
+.section-padding {
   padding: 30px 0;
 
   @media (max-width: 600px) {
-    &{
+    & {
       padding: 15px;
     }
   }
 }
 
-.content__title{
+.content__title {
   margin-bottom: 30px;
 }
 
@@ -76,21 +76,22 @@
 
 .movie-page {
   background: url("../../images/bgImg/bg-1.png") no-repeat left top,
-    url("../../images/bgImg/bg-2.png") no-repeat right center,
-    url("../../images/bgImg/bg-3.png") no-repeat left bottom,
+    url("../../images/bgImg/bg-2.png") no-repeat right 40%,
+    url("../../images/bgImg/bg-3.png") no-repeat left 65%,
+    url("../../images/bgImg/bg-4.png") no-repeat right bottom;
 }
 
 // !MAIN
 
-.main {
-  padding-bottom: 60px;
+// .main {
+//   padding-bottom: 40px;
 
-  @media (max-width: 786px) {
-    & {
-      padding-bottom: 30px;
-    }
-  }
-}
+//   @media (max-width: 786px) {
+//     & {
+//       padding-bottom: 30px;
+//     }
+//   }
+// }
 
 .main__inner {
   display: grid;

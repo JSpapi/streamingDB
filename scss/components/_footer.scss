@@ -1,15 +1,17 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
+.footer{
+  padding-top: 30px;
+
+  @media (max-width: 600px) {
+    padding-top: 15px;
+  
+  }
+}
+
 .footer__content {
   @include transparentFooterBg;
-  margin-top: 60px;
-
-  @media (max-width: 786px) {
-    & {
-      margin-top: 30px;
-    }
-  }
 }
 
 .footer__info {

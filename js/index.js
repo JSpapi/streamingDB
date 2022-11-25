@@ -18,6 +18,7 @@ import { movieSliders } from "./headingSlider.js";
 
 // !import content slider
 import { similarFilmCards, selectionFilmCards } from "./filmsCards.js"
+import {actorsCards  } from "./actorsCard.js"
 
 // !import FILM cards to chose film
 import { contentSlider } from "./contentSlider.js";
@@ -119,6 +120,9 @@ const triggerAllFunctions = () => {
   similarFilmCards();
   // !FILM CARDS TO CHOSE
   selectionFilmCards();
+   // !ACTORS CARDS
+  actorsCards();
 };
 
 triggerAllFunctions();
+
