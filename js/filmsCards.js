@@ -67,4 +67,61 @@ const createSimilarFilmsItem = (similarFilmsData, similarFilmsParent)=> {
 	}).join('');
 
 	similarFilmsParent.innerHTML = newSimilarFilms;
+};
+
+// ! SELECTION FILMS
+export const selectionFilmCards = ()=> {
+	const selectionFilmData = [
+		{
+			img: './images/films/film-17.jpg',
+			theme: 'Филмы, основанные на реальных событиях',
+		},
+		{
+			img: './images/films/film-18.jpg',
+			theme: 'Филмы, жили долго и счастлива',
+		},
+		{
+			img: './images/films/film-19.jpg',
+			theme: 'Филмы, путишествие во времени',
+		},
+		{
+			img: './images/films/film-20.jpg',
+			theme: 'Филмы, про мрачное будущее',
+		},
+		{
+			img: './images/films/film-21.jpg',
+			theme: 'Филмы, про сказки',
+		},
+		{
+			img: './images/films/film-22.jpg',
+			theme: 'Филмы, про гениев',
+		},
+		{
+			img: './images/films/film-23.jpg',
+			theme: 'Филмы, про фэнтези',
+		},
+		{
+			img: './images/films/film-24.jpg',
+			theme: 'Филмы, про Марс',
+		},
+	];
+
+	const selectionFilmParent = document.querySelector('.seclection__movies-content');
+	createSelectionFilmsItem(selectionFilmData, selectionFilmParent)
+};
+
+const createSelectionFilmsItem = (selectionFilmData, selectionFilmParent)=> {
+	const newSelectionFilms = selectionFilmData.map(({img, theme})=> {
+		return `
+			<article class="seclection__movies-item">
+				<a href="#!" class="seclection__movies-img">
+				<img class="movies-img" src="${img}" alt="${theme}">
+				</a>
+
+				<p class="seclection__movies-title">${theme}</p>
+			</article>
+		`;
+	}).join('');
+
+	selectionFilmParent.innerHTML = newSelectionFilms;
 }

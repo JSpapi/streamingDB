@@ -49,7 +49,7 @@ const getFilmData = async (filmParent) => {
 						<div class="movie__card-left_trailer_img">
 							<img
 							class="trailer_img"
-							src="./images/films/trailer-img.png"
+							src="./images/films/trailer.jpg"
 							alt=""
 							/>
 
@@ -301,6 +301,7 @@ const getFilmData = async (filmParent) => {
         mainVideo.pause();
       });
     } else {
+		
     }
   } catch (error) {
     alert("sorry... thechnical problems with server");

@@ -17,7 +17,7 @@ import {
 import { movieSliders } from "./headingSlider.js";
 
 // !import content slider
-import { similarFilmCards } from "./filmsCards.js"
+import { similarFilmCards, selectionFilmCards } from "./filmsCards.js"
 
 // !import FILM cards to chose film
 import { contentSlider } from "./contentSlider.js";
@@ -117,6 +117,8 @@ const triggerAllFunctions = () => {
 
   // !FILM CARDS TO CHOSE
   similarFilmCards();
+  // !FILM CARDS TO CHOSE
+  selectionFilmCards();
 };
 
 triggerAllFunctions();
