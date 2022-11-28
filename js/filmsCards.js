@@ -65,8 +65,14 @@ const createSimilarFilmsItem = (similarFilmsData, similarFilmsParent)=> {
 			</article>
 		`;
 	}).join('');
+	// !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
+	if(similarFilmsParent){
+		similarFilmsParent.innerHTML = newSimilarFilms;
 
-	similarFilmsParent.innerHTML = newSimilarFilms;
+	}else{
+		return;
+	}
+
 };
 
 // ! SELECTION FILMS
@@ -122,6 +128,11 @@ const createSelectionFilmsItem = (selectionFilmData, selectionFilmParent)=> {
 			</article>
 		`;
 	}).join('');
+	if(selectionFilmParent){
+		selectionFilmParent.innerHTML = newSelectionFilms;
 
-	selectionFilmParent.innerHTML = newSelectionFilms;
+	}else{
+		return;
+	}
+
 }

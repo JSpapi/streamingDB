@@ -64,8 +64,13 @@ const createNewCollectionMovies = (
 		`;
     })
     .join("");
+    // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
     if(newCollectionParrent){
-      newCollectionParrent.innerHTML = createNewCollection;
+      if(newCollectionParrent){
+        newCollectionParrent.innerHTML = createNewCollection;
+      }else{
+        return;
+      }
     }else{
       return;
     }

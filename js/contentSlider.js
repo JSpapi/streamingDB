@@ -132,8 +132,13 @@ const createContentSlider = (contentSliderParent, bestFilms, newFilms) => {
 				`;
         })
         .join("");
+// !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
+        if(contentSlider){
+          contentSlider.innerHTML = newBestFilms;
+        }else{
+          return;
+        }
 
-      contentSlider.innerHTML = newBestFilms;
     } else {
       const createLatesFilms = newFilms
         .map(({ id, img, name, info, kinopoiskRate, imdbRate }) => {
@@ -172,8 +177,13 @@ const createContentSlider = (contentSliderParent, bestFilms, newFilms) => {
 			 </div>
 				`;
         })
+        // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
         .join("");
-      contentSlider.innerHTML = createLatesFilms;
+        if(contentSlider){
+          contentSlider.innerHTML = createLatesFilms;
+        }else{
+          return;
+        }
     }
   });
 };

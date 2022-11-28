@@ -43,6 +43,7 @@ const dragableProgressBar = (e) => {
 //TODO !ACTIVE FILM PLAYER AFTER CHOOSING FILM
 
 export const createFilmPlayer = () => {
+  if(!filmContainer) return;
 
   //TODO !HIDE CONTROLS
   const hideControls = () => {

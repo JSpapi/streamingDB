@@ -112,6 +112,7 @@ const createCards = (genreData, genreParent) => {
       }
     })
     .join("");
+    // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
     if(genreParent){
       genreParent.innerHTML = newGeners;
     }else{

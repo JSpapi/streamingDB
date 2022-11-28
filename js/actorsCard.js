@@ -8,14 +8,14 @@ export const actorsCards = () => {
   createActorsCard(ACTORS_DATA_URL, populerActorsParent);
 };
 
-const createActorsCard = async ( ACTORS_DATA_URL, populerActorsParent,) => {
-
+const createActorsCard = async (ACTORS_DATA_URL, populerActorsParent) => {
   const data = await fetch(ACTORS_DATA_URL);
   const actorsCard = await data.json();
   try {
-	if(data.ok){
-		const newActorsCard = actorsCard.map(({image, name}) => {
-			return `
+    if (data.ok) {
+      const newActorsCard = actorsCard
+        .map(({ image, name }) => {
+          return `
 				<article class="popular__actors-item">
 					<a  class="popular__actors-img" href="#!">
 					<img class="movies-img" src="${image}" alt="">
@@ -23,15 +23,20 @@ const createActorsCard = async ( ACTORS_DATA_URL, populerActorsParent,) => {
 					<p class="popular__actors-name fontBold18">${name}</p>
 				</article>
 			`;
-		}).join('');
+        })
+        .join("");
+        
+        // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
+        if(populerActorsParent){
+          populerActorsParent.innerHTML = newActorsCard;
+        }else{
+          return;
+        }
 
-		populerActorsParent.innerHTML = newActorsCard;
-	  }else{
-		throw new Error('Данные не существуют')
-	  }
+    } else {
+      throw new Error("Данные не существуют");
+    }
   } catch (err) {
-		alert(err)
+    alert(err);
   }
-  
 };
-

@@ -13,6 +13,7 @@ import {
   logIn,
 } from "./authorization.js";
 
+
 // !import header slider
 import { movieSliders } from "./headingSlider.js";
 

@@ -1,10 +1,28 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
+.movie-number {
+  font-weight: 700;
+  font-size: 67px;
+  line-height: 82px;
+  color: #727272;
+  position: absolute;
+  top: -62px;
+  align-self: flex-start;
+  z-index: -1;
+
+  @media (max-width: 600px) {
+    font-size: 37px;
+    line-height: 43px;
+    top: -33px;
+  }
+}
+
 .movie__card {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding: 40px 0;
 
   @media (max-width: 1440px) {
     gap: 10px;
@@ -28,6 +46,7 @@
   }
 
   &_img {
+    display: inline-block;
     width: 100%;
     cursor: pointer;
     filter: drop-shadow(0px 7px 16px rgba(0, 0, 0, 0.14));
@@ -118,7 +137,6 @@
 
     &_img {
       width: 400px;
-
 
       @media (max-width: 1200px) {
         width: 100%;
