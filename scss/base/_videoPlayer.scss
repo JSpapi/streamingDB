@@ -203,3 +203,59 @@
   max-width: 100%;
   width: 100%;
 }
+
+@media (max-width: 410px) {
+  .filmPlayer {
+    .film__controls {
+      padding: 5px 5px 10px;
+
+      .options {
+        button {
+          width: 25px;
+          height: 18px;
+          font-size: 14px;
+        }
+
+        button :where(i, span) {
+          line-height: 15px;
+        }
+
+        input {
+          display: none;
+        }
+
+        .film__timer {
+          font-size: 12px;
+          margin-left: 5px;
+
+          .separator {
+            font-size: 14px;
+            margin: 0 2px;
+          }
+        }
+
+        .pic-in-pic {
+          display: none;
+        }
+      }
+
+      .playback-content {
+        position: relative;
+
+        .speed-options {
+          bottom: 40px;
+          left: -20px;
+          width: 55px;
+
+          li {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .options:last-child {
+        justify-content: space-around;
+      }
+    }
+  }
+}
