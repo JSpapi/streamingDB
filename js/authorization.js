@@ -185,10 +185,10 @@ function isUserLogIN() {
   }
 }
 
-const getLoginData = async (userName, userPassword) => {
-  const userEmailValue = userName.value.trim();
+const getLoginData = async (userEmail, userPassword) => {
+  const userEmailValue = userEmail.value.trim();
   const userPasswordValue = userPassword.value.trim();
-  const popUp = userName.closest(".authorization-popup");
+  const popUp = userEmail.closest(".authorization-popup");
 
   const loginUrl = "https://ramazanmovie.uz/api/v1/login/";
 
@@ -221,7 +221,7 @@ const getLoginData = async (userName, userPassword) => {
     alert(error);
   }
 
-  userName.value = "";
+  userEmail.value = "";
   userPassword.value = "";
 };
 
