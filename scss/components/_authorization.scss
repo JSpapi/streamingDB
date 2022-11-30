@@ -3,34 +3,28 @@
 
 // !overlay
 
-#overlay{
+#overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 500;
 
   opacity: 0;
   pointer-events: none;
 
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-
-#overlay.active{
-  opacity: 1;
-  pointer-events: all;
-}
-
 
 #overlay.active {
   opacity: 1;
   pointer-events: all;
 }
 
-.authorization-popup{
+.authorization-popup {
   width: 400px;
   max-width: 80%;
 
@@ -39,12 +33,12 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
 
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 
   z-index: 501;
 }
 
-.authorization-popup.active{
+.authorization-popup.active {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -166,12 +160,12 @@
     }
   }
 
-  .authorization__submit{
+  .authorization__submit {
     width: 100%;
     margin-top: 20px;
   }
 
-  .authorization__submit-btn{
+  .authorization__submit-btn {
     color: $white;
     background: $green;
     font-size: 16px;
@@ -183,4 +177,17 @@
   }
 }
 
+.userNick, .logOut {
+  color: $white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  display: inline-block;
+  letter-spacing: .8px;
+}
 
+.logOut{
+  color: #a02828;
+  margin-left: 5px;
+  cursor: pointer;
+}

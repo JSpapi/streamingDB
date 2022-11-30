@@ -25,14 +25,13 @@ const createActorsCard = async (ACTORS_DATA_URL, populerActorsParent) => {
 			`;
         })
         .join("");
-        
-        // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
-        if(populerActorsParent){
-          populerActorsParent.innerHTML = newActorsCard;
-        }else{
-          return;
-        }
 
+      // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN
+      if (populerActorsParent) {
+        populerActorsParent.innerHTML = newActorsCard;
+      } else {
+        return;
+      }
     } else {
       throw new Error("Данные не существуют");
     }

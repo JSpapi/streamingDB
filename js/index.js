@@ -11,6 +11,7 @@ import {
   createLogInfunctional,
   userRegistration,
   logIn,
+  logOut,
 } from "./authorization.js";
 
 
@@ -106,6 +107,7 @@ const triggerAllFunctions = () => {
 
   userRegistration();
   logIn();
+  logOut();
   // !HEADING SLIDER
   movieSliders();
 

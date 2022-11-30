@@ -1,10 +1,3 @@
-// export const disableAllBtns = () => {
-//   const allBtns = document.querySelectorAll("button");
-//   allBtns.forEach((btn) => {
-//     btn.addEventListener("click", (e) => e.preventDefault());
-//   });
-// };
-
 // !navbar burger function
 export const activeAdaptiveNavbar = () => {
   const NavbarOpenBtn = document.querySelector(".navbar-burger");

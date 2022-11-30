@@ -51,6 +51,7 @@ export const createFilmPlayer = () => {
       filmContainer.classList.remove("show-controls");
     }, 2000);
   };
+  
   hideControls();
 
   filmContainer.addEventListener("mousemove", () => {
