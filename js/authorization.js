@@ -149,7 +149,7 @@ export const logIn = () => {
 
     setTimeout(() => {
       location.reload();
-    }, 5000);
+    }, 1000);
   });
   isUserLogIN();
 };
