@@ -204,7 +204,7 @@
   width: 100%;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 500px) {
   .filmPlayer {
     .film__controls {
       padding: 5px 5px 10px;
@@ -232,10 +232,6 @@
             font-size: 14px;
             margin: 0 2px;
           }
-        }
-
-        .pic-in-pic {
-          display: none;
         }
       }
 
