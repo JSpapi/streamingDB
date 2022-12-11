@@ -99,7 +99,7 @@ const createContentSlider = (contentSliderParent, bestFilms, newFilms) => {
           return `
 				<div class="contentSlider__sliders-item" id="${id}">
 					<div class="contentSlider__sliders-img">
-						<a class="contentSlider__sliders-imgLink" href="#!">
+						<a class="contentSlider__sliders-imgLink" href="../filmPlayer.html">
 							<img class="slider-img" src="${img}" alt="${name}" />
 
 							<div class="play__movie">
@@ -132,20 +132,19 @@ const createContentSlider = (contentSliderParent, bestFilms, newFilms) => {
 				`;
         })
         .join("");
-// !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
-        if(contentSlider){
-          contentSlider.innerHTML = newBestFilms;
-        }else{
-          return;
-        }
-
+      // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN
+      if (contentSlider) {
+        contentSlider.innerHTML = newBestFilms;
+      } else {
+        return;
+      }
     } else {
       const createLatesFilms = newFilms
         .map(({ id, img, name, info, kinopoiskRate, imdbRate }) => {
           return `
 				<div class="contentSlider__sliders-item" id="${id}">
 				<div class="contentSlider__sliders-img">
-					<a class="contentSlider__sliders-imgLink" href="#!">
+					<a class="contentSlider__sliders-imgLink" href="../filmPlayer.html">
 						<img class="slider-img" src="${img}" alt="${name}" />
 
 						<div class="play__movie">
@@ -177,13 +176,13 @@ const createContentSlider = (contentSliderParent, bestFilms, newFilms) => {
 			 </div>
 				`;
         })
-        // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN 
+        // !CHECKING IF THERE IS THIS CLASS, UNLESS RETURN
         .join("");
-        if(contentSlider){
-          contentSlider.innerHTML = createLatesFilms;
-        }else{
-          return;
-        }
+      if (contentSlider) {
+        contentSlider.innerHTML = createLatesFilms;
+      } else {
+        return;
+      }
     }
   });
 };

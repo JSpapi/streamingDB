@@ -6,12 +6,12 @@
   margin-bottom: 30px;
 }
 
-.signUp-logIn{
+.signUp-logIn {
   padding-top: 30px;
   width: 100%;
   text-align: right;
-  
-  a{
+
+  a {
     font-size: 16px;
     line-height: 18px;
     color: $green;
@@ -89,7 +89,7 @@
 
     .navbar-list__link_list {
       position: absolute;
-      top: 90px;
+      top: 85px;
       width: 180px;
 
       @include transparentNavbarBg;

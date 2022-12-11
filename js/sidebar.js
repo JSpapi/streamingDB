@@ -47,7 +47,7 @@ const createNewCollectionMovies = (
     .map(({ img, description, id, time }) => {
       return `
 			<div class="new__collection-movie">
-				<a href="#!" class="new__collection-img">
+				<a href="../movie.html" class="new__collection-img">
 					<img src="${img}" alt="sidebar-${id}" />
 				</a>
 				<div class="new__collection-content">
@@ -56,7 +56,7 @@ const createNewCollectionMovies = (
 						${time}
 					</p>
 
-					<a class="new__collection-description" href="#!">
+					<a class="new__collection-description" href="../movie.html">
 						${description}
 					</a>
 				</div>
